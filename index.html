@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>УникУм</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/app/catalog.js"></script>
+</head>
+
+<body>
+<header class="header" id="header">
+  <div class="header__items container">
+    <a href="#home" class="header__logo"></a>
+    <div class="header__action">
+      <nav class="header__nav">
+        <div class="nav__burger" id="nav_burger"></div>
+        <div class="nav__items" id="nav_items">
+          <a href="#home" class="nav__item activ__nav">
+            <div class="nav__icon">&#xe90a;</div><span>Главная</span>
+          </a>
+          <a href="#programm" class="nav__item">
+            <div class="nav__icon">&#xe90b;</div><span>Программа</span>
+          </a>
+          <a href="#teachers" class="nav__item">
+            <div class="nav__icon">&#xe90c;</div><span>Педагоги</span>
+          </a>
+          <a href="#gallary" class="nav__item">
+            <div class="nav__icon">&#xe90d;</div><span>Галерея</span>
+          </a>
+          <a href="#" class="nav__item">
+            <div class="nav__icon">&#xe90e;</div><span>Отзывы</span>
+          </a>
+          <a href="#" class="nav__item">
+            <div class="nav__icon">&#xe90f;</div><span>Контакты</span>
+          </a>
+        </div>
+      </nav>
+      <div class="radio__wrapper">
+        <div class="header__radio">
+          <div class="radio__volume" id="radio_volume"></div>
+          <button class="radio__track_action" id="track_action" disabled></button>
+          <div id="radio_select">
+            <div class="radio__track_container" id="track_container">
+              <div class="radio__track radio__title" id="radio_stantion">Выберите радиостанцию</div>
+              <div class="radio__track" id="radio_track"></div>
+            </div>
+            <div class="radio__selector" id="radio_selector"></div>
+          </div>
+          <div class="volume__range_container" id="range_container">
+            <div class="volume__off" id="volume_on_off"></div>
+            <input class="input__range" type="range" id="volume_range" min="0" max="1" step="0.01" value="0">
+            <div class="volume__value" id="volume_value">000</div>
+          </div>
+          <form class="radio__list" id="radio_navigation">
+            <ul>
+              <li>
+                <label><input class="radio__btn" type="radio" name="stantion" data-function-name="kidHit();" data-stantion-url="https://deti.volna.top/Deti" data-stantion-name="Детский Хит" oninput="kidHit();"><span class="radio__stantion">Детский Хит</span></label>
+              </li>
+              <li>
+                <label><input class="radio__btn" type="radio" name="stantion" data-function-name="radioDisney();" data-stantion-url="https://disney.hostingradio.ru:8060/disney" data-stantion-name="Радио Disney" oninput="radioDisney();"><span class="radio__stantion">Радио Disney</span></label>
+              </li>
+              <li>
+                <label><input class="radio__btn" type="radio" name="stantion" data-function-name="detiFM()" data-stantion-url="https://pub0302.101.ru:8443/stream/air/aac/64/199" data-stantion-name="Дети FM" oninput="detiFM();"><span class="radio__stantion">Дети FM</span></label>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="section__titles">
+   <ul class="section__titles_wrapper">
+     <li class="section__title">Программа</li>
+     <li class="section__title">Педагоги</li>
+     <li class="section__title">Галерея</li>
+     <li class="section__title">Отзывы</li>
+     <li class="section__title">Контакты</li>
+   </ul>
+ </div>
+  <section class="home" id="home">
+    <div class="home__items container">
+      <div class="home_disc">
+        <img class="home__logo" src="assets/img/logo/unicum_logo.svg" alt="unicum_logo">
+        <div class="home__text">
+          <p>Прием детей с трех лет</p>
+          <p>Уникальная методика обучения</p>
+          <p>Педагоги с большим стажем</p>
+          <p>Подготовка к школе</p>
+          <p>Трепетное отношение к каждому ребенку</p>
+        </div>
+        <div class="home__icons">
+          <a class="home__icon" target="_blank" href="https://www.instagram.com/unikum_almaty/">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#instagram_set2"></use>
+            </svg>
+          </a>
+          <a class="home__icon" target="_blank" href="">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+            </svg>
+          </a>
+          <a class="home__icon" target="_blank" href="https://wa.me/77715761118">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+            </svg>
+          </a>
+          <a class="home__icon" target="_blank" href="">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#youtube_set2"></use>
+            </svg>
+          </a>
+          <a class="home__icon" target="_blank" href="">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="home__img">
+        <img src="assets/img/home_image.png" alt="home_image">
+      </div>
+    </div>
+  </section>
+  
+  <section class="programm" id="programm">
+    <div class="container _programm">
+<!--      <h2 class="section__title">Программа</h2>-->
+      <div class="section__wrapper">
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#kz"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Казахский язык</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  </div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#en"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Английский язык</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#gramatics"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Грамота и развитие речи</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#caligraf"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Отработка каллиграфии</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#book"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Отработка техники чтения</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#math"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Математика</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#calc"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Отработка вычисления</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        <article class="programm__content">
+          <div class="programm__items">
+            <div class="programm__items_logo">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#art"></use>
+              </svg>
+            </div>
+            <h3 class="programm__items_title">Творчество</h3>
+          </div>
+          <div class="programm__content_disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit reiciendis placeat, laborum enim, debitis molestias minima voluptates quo harum!  Earum voluptatem quam, quia tempore dolor possimus velit, aliquid aliquam vel.15</div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="teachers" id="teachers">
+    <div class="container">
+<!--      <h2 class="section__title">Педагоги</h2>-->
+      <div class="section__wrapper">
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/ironMan.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Тони</div>
+            <div class="teachers__items_surname">Старк</div>
+            <div class="teachers__items_jobtitle">Железный человек</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/blackWidow.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Наташа</div>
+            <div class="teachers__items_surname">Романофф</div>
+            <div class="teachers__items_jobtitle">Чёрная Вдова</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/starLord.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Питер Джейсон</div>
+            <div class="teachers__items_surname">Квилл</div>
+            <div class="teachers__items_jobtitle">Звёздный Лорд</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/theWasp.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Джанет</div>
+            <div class="teachers__items_surname">ван Дайн</div>
+            <div class="teachers__items_jobtitle">Оса</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/gamora.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Гамора</div>
+            <div class="teachers__items_surname"></div>
+            <div class="teachers__items_jobtitle">Приёмная дочь Таноса</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/hulk.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Брюс</div>
+            <div class="teachers__items_surname">Беннер</div>
+            <div class="teachers__items_jobtitle">Халк</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/scarletWitch.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Ванда</div>
+            <div class="teachers__items_surname">Максимофф</div>
+            <div class="teachers__items_jobtitle">Алая ведьма</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        <article class="teachers__content">
+          <div class="teachers__images">
+            <img src="assets/img/teachers/loki.png" alt="" class="teachers_img">
+          </div>
+          <div class="teachers__items">
+            <div class="teachers__items_name">Локи</div>
+            <div class="teachers__items_surname">Лафейсон</div>
+            <div class="teachers__items_jobtitle">Бог хитрости и обмана</div>
+            <div class="teachers__items_social">
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#facebook_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp_set2"></use>
+                </svg>
+              </a>
+              <a class="social__icon" target="_blank" href="">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mail_set2"></use>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </article>
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="gallary" id="gallary">
+    <div class="container">
+      <div class="gallary__wrapper" id="gallary_wrapper">
+      </div>
+    </div>
+  </section>
+  
+<div class="gallery__slider" id="slider">
+  <div class="sliders__wrapper" id="sliders_wrapper">
+    <div class="slaider__action">
+      <div id="cls_slider"></div>
+      <div class="btn__container">
+        <button id="prev_slide"></button>
+        <div class="count__slide" id="countSlide"></div>
+        
+<!--        <button class="play__slide" id="play_slide"></button>-->
+        <button id="next_slide"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="video" id="video">
+  <div class="video__wrapper" id="videoWrapper">
+    <div class="video__content" id="videoContent">
+      <img alt="poster" id="videoPoster">
+       <div id="clsVideo"></div>
+      <video class="video__player" id="videoPlayer" playsinline></video>
+     <div class="video__toolbar " id="videoToolbar">
+           <div class="video__action">
+             <div class="video__buttons">
+               <button class="video-btn" id="prevBtn"></button>
+               <button class="video-btn" id="backwardBtn"></button>
+               <button class="video-btn play" id="playPauseBtn"></button>
+               <button class="video-btn" id="stopBtn" disabled></button>
+               <button class="video-btn" id="forwardBtn"></button>
+               <button class="video-btn" id="nextBtn"></button>
+             </div>
+             <div class="video__timer">
+               <div class="timer" id="timePassed">00:00</div>
+               <input type="range" class="input__range video__progress" id="videoProgress" min="0" max="100" step="0.1" value="0">
+               <div class="timer" id="timeTotal">00:00</div>
+             </div>
+             <button class="video-btn fullscreen" id="fullScreenBtn"></button>
+           </div>
+     </div>
+    </div >
+  </div>
+</div>
+
+</main>
+<footer class="footer"></footer>
+
+<!--<script src="assets/app/variables.js"></script>-->
+<script src="assets/app/radio.js"></script>
+<script src="assets/app/app.js"></script>
+<script src="assets/app/smoothscroll.js"></script>
+<script src="assets/app/gallary.js"></script>
+<script src="assets/app/video.js"></script>
+</body>
+</html>
+
+
+
